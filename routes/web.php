@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\FoodController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use \Illuminate\Support\Facades\DB;
@@ -22,39 +23,12 @@ Route::get('about', [PageController::class, 'about']);
 Route::get('blog-single', [PageController::class, 'blog_single']);
 Route::get('blog', [PageController::class, 'blog']);
 Route::get('chef', [PageController::class, 'chef']);
-Route::get('contact', [PageController::class, 'contact']);
 Route::get('/menu', [PageController::class, 'menu']);
 Route::get('reservation', [PageController::class, 'reservation']);
 
-//REST
-// GET
-// POST
-// Agar ma'lumotni o'zgartirihs garak bo'lsa:
-// PATCH,PUT
-// Agar ma'lumotni o'chirish garak bo'lsa:
-// DELETE
 
-//Route::get('admin/categories', [CategoryController::class, 'index'])
-//    ->name('admin.categories.index')
-//    ->middleware('auth');
-//Route::get('admin/categories/create', [CategoryController::class, 'create'])
-//    ->name('admin.categories.create')
-//    ->middleware('auth');
-//Route::post('admin/categories/store', [CategoryController::class, 'store'])
-//    ->name('admin.categories.store')
-//    ->middleware('auth');
-//
-//Route::get('admin/categories/{id}/edit', [CategoryController::class, 'edit'])
-//    ->name('admin.categories.edit')
-//    ->middleware('auth');
-//
-//Route::patch('admin/categories/{id}', [CategoryController::class, 'update'])
-//    ->name('admin.categories.destroy')
-//    ->middleware('auth');
-//
-//Route::delete('admin/categories/{id}', [CategoryController::class, 'destroy'])
-//    ->name('admin.categories.destroy')
-//    ->middleware('auth');
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('contact', [ContactController::class, 'contact'])->name('.contact.send');
 
 Route::resource('admin/categories', CategoryController::class)->names('admin.categories')->middleware('auth');
 Route::resource('admin/foods', FoodController::class)->names('admin.foods')->middleware('auth');
