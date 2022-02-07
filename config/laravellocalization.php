@@ -142,7 +142,7 @@ return [
         //'om'          => ['name' => 'Oromo',                  'script' => 'Latn', 'native' => 'Oromoo', 'regional' => 'om_ET'],
         //'ng'          => ['name' => 'Ndonga',                 'script' => 'Latn', 'native' => 'OshiNdonga', 'regional' => ''],
         //'hz'          => ['name' => 'Herero',                 'script' => 'Latn', 'native' => 'Otjiherero', 'regional' => ''],
-        'uz-Latn'     => ['name' => 'Uzbek (Latin)',          'script' => 'Latn', 'native' => 'oʼz', 'regional' => 'uz_UZ'],
+        'uz'     => ['name' => 'Uzbek (Latin)',          'script' => 'Latn', 'native' => 'oʼz', 'regional' => 'uz_UZ'],
         //'nds'         => ['name' => 'Low German',             'script' => 'Latn', 'native' => 'Plattdüütsch', 'regional' => 'nds_DE'],
         //'pl'          => ['name' => 'Polish',                 'script' => 'Latn', 'native' => 'polski', 'regional' => 'pl_PL'],
         //'pt'          => ['name' => 'Portuguese',             'script' => 'Latn', 'native' => 'português', 'regional' => 'pt_PT'],
@@ -208,7 +208,7 @@ return [
         //'mas'         => ['name' => 'Masai',                  'script' => 'Latn', 'native' => 'ɔl-Maa', 'regional' => ''],
         //'haw'         => ['name' => 'Hawaiian',               'script' => 'Latn', 'native' => 'ʻŌlelo Hawaiʻi', 'regional' => ''],
         //'el'          => ['name' => 'Greek',                  'script' => 'Grek', 'native' => 'Ελληνικά', 'regional' => 'el_GR'],
-        'uz'          => ['name' => 'Uzbek (Cyrillic)',       'script' => 'Cyrl', 'native' => 'Ўз', 'regional' => 'uz_UZ'],
+        'oz'          => ['name' => 'Uzbek (Cyrillic)',       'script' => 'Cyrl', 'native' => 'Ўз', 'regional' => 'uz_UZ'],
         //'az-Cyrl'     => ['name' => 'Azerbaijani (Cyrillic)', 'script' => 'Cyrl', 'native' => 'Азәрбајҹан', 'regional' => 'uz_UZ'],
         //'ab'          => ['name' => 'Abkhazian',              'script' => 'Cyrl', 'native' => 'Аҧсуа', 'regional' => ''],
         //'os'          => ['name' => 'Ossetic',                'script' => 'Cyrl', 'native' => 'Ирон', 'regional' => 'os_RU'],
@@ -327,7 +327,7 @@ return [
     // If `useAcceptLanguageHeader` is true, then the first time
     // the locale will be determined from browser and redirect to that language.
     // After that, `hideDefaultLocaleInURL` behaves as usual.
-    'hideDefaultLocaleInURL' => false,
+    'hideDefaultLocaleInURL' => true,
 
     // If you want to display the locales in particular order in the language selector you should write the order here.
     //CAUTION: Please consider using the appropriate locale code otherwise it will not work

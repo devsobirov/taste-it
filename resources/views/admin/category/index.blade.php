@@ -15,9 +15,10 @@
                             <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#ID</th>
-                                <th scope="col">Nomi</th>
+                                <th scope="col">Nomi-uz</th>
+                                <th scope="col">Nomi-ru</th>
+                                <th scope="col">Nomi-en</th>
                                 <th scope="col">Izoh</th>
-                                <th scope="col">Taomlari</th>
                                 <th scope="col">Amaliyotlar</th>
                             </tr>
                             </thead>
@@ -26,17 +27,10 @@
                                 @foreach($categories as $item)
                                     <tr>
                                         <th>{{ $item->id }}</th>
-                                        <td>{{ $item->word }} {{ $item->niceName() }}</td>
+                                        <td>{{ $item->getTranslation('name', 'uz') }}</td>
+                                        <td>{{ $item->getTranslation('name', 'ru') }}</td>
+                                        <td>{{ $item->getTranslation('name', 'en') }}</td>
                                         <td>{{ $item->description }}</td>
-                                        <td>
-{{--                                            @foreach(\App\Models\Food::where('category_id', $item->id)->get() as $food)--}}
-{{--                                                {{ $food->name }} <br>--}}
-{{--                                            @endforeach--}}
-                                            @foreach($item->food as $food)
-                                                {{ $food->name }} <br>
-                                            @endforeach
-{{--                                            {{ $item->food->name }}--}}
-                                        </td>
                                         <td>
                                             <div class="d-flex flex-column align-items-center justify-content-center">
                                                 <a href="{{ route('admin.categories.edit', $item->id) }}" class="btn btn-success">Tahrirlash</a>

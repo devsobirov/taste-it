@@ -45,7 +45,7 @@ class PageController extends Controller
 
     public function menu(Request $request)
     {
-        $categories = DB::table('categories')->select(['id','name'])->get();
+        $categories = Category::select(['id','name'])->get();
         $foods = Food::select(['id','category_id','name','image','recept','price'])
             ->filter($request)
             ->get();

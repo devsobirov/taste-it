@@ -16,23 +16,48 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                'name' => 'Milliy Taomlar',
+                'name' => json_encode([
+                    'uz' => 'Milliy Taomlar',
+                    'ru' => 'Национальное Блюда',
+                    'en' => 'National Food',
+                    'jojo' => 'Jojo Jojo'
+                ]),
                 'description' => 'Ozbek milliy taomlari'
             ],
             [
-                'name' => 'Uygur Taomlari',
+                'name' => json_encode([
+                    'uz' => 'Milliy Taomlar',
+                    'ru' => 'Национальное Блюда',
+                    'en' => 'National Food',
+                    'jojo' => 'Jojo Jojo'
+                ]),
                 'description' => null
             ],
             [
-                'name' => 'Nonushta',
+                'name' => json_encode([
+                    'uz' => 'Milliy Taomlar',
+                    'ru' => 'Национальное Блюда',
+                    'en' => 'National Food',
+                    'jojo' => 'Jojo Jojo'
+                ]),
                 'description' => 'nonushta uchun taomlar'
             ],
             [
-                'name' => 'Fast Food',
+                'name' => json_encode([
+                    'uz' => 'Milliy Taomlar',
+                    'ru' => 'Национальное Блюда',
+                    'en' => 'National Food',
+                    'jojo' => 'Jojo Jojo'
+                ]),
                 'description' => 'Burger, Pizza, Hot-Dog'
             ],
             [
-                'name' => 'Shirinliklar',
+                'name' => json_encode([
+                    'uz' => 'Milliy Taomlar',
+                    'ru' => 'Национальное Блюда',
+                    'en' => 'National Food',
+                    'jojo' => 'Jojo Jojo'
+                ]),
                 'description' => null
             ]
         ];

@@ -13,8 +13,16 @@
                         <form action="{{ route('admin.categories.update', $item->id) }}" method="POST">
                             @method('PATCH') @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nomi</label>
-                                <input class="form-control" value="{{ $item->name }}" name="name">
+                                <label for="exampleInputEmail1">Nomi - ru</label>
+                                <input class="form-control" value="{{ $item->getTranslation('name', 'ru') }}" name="name[ru]">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nomi - en</label>
+                                <input class="form-control" value="{{ $item->getTranslation('name', 'en') }}" name="name[en]">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nomi - uz</label>
+                                <input class="form-control" value="{{ $item->getTranslation('name', 'uz') }}" name="name[uz]">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Izoh</label>

@@ -79,8 +79,15 @@ class CategoryController extends Controller
 
     public function update($id, Request $request)
     {
+        /** 1- usul
+            $name = [];
+            $name['uz'] = $request->input('name_uz');
+            $name['ru'] = $request->input('name_ru');
+            $name['en'] = $request->input('name_en');
+         **/
         $category = Category::find($id);
         $category->update($request->input());
+
         return redirect()->back();
     }
 
