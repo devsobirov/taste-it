@@ -124,7 +124,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-center">
-<span>Now Booking</span>
+<span>{{ __('hello.salom') }}</span>
 <h2>Private Dinners &amp; Happy Hours</h2>
 </div>
 </div>

@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
+
+    public function index()
+    {
+        return view('index');
+    }
+
     public function about()
     {
         return view('about');
@@ -35,11 +41,6 @@ class PageController extends Controller
     public function contact()
     {
         return view('contact');
-    }
-
-    public function index()
-    {
-        return view('index');
     }
 
     public function menu(Request $request)

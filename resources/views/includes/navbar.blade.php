@@ -13,6 +13,15 @@
 <li class="nav-item"><a href="/reservation" class="nav-link">Reservation</a></li>
 <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <li class="nav-item" >
+            <a rel="alternate" class="nav-link" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                {{ $properties['native'] }}
+            </a>
+        </li>
+    @endforeach
+
 </ul>
 </div>
 </div>

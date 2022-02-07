@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/A.animate.css+owl.carousel.min.css+owl.theme.default.min.css+magnific-popup.css+bootstrap-datepicker.css+jquery.timepicker.css+flaticon.css+style.css,Mcc.RuFz_k4bhO.css.pagespeed.cf.ESm1BFElw-.css" />
+    <link rel="stylesheet" href="{{ asset('css/A.animate.css+owl.carousel.min.css+owl.theme.default.min.css+magnific-popup.css+bootstrap-datepicker.css+jquery.timepicker.css+flaticon.css+style.css,Mcc.RuFz_k4bhO.css.pagespeed.cf.ESm1BFElw-.css') }}" />
 </head>
 <body>
 <div class="wrap">
@@ -41,21 +41,23 @@
 @include('includes/footer')
 
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.-6w41TTlbS.js"></script><script>eval(mod_pagespeed_q49oLQo$KZ);</script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.-6w41TTlbS.js') }}"></script><script>eval(mod_pagespeed_q49oLQo$KZ);</script>
 <script>eval(mod_pagespeed_pZqbG0Jgl8);</script>
 <script>eval(mod_pagespeed_dSDBfobq1n);</script>
-<script src="js/jquery.easing.1.3.js+jquery.waypoints.min.js+jquery.stellar.min.js+owl.carousel.min.js.pagespeed.jc.NEztLSF23K.js"></script><script>eval(mod_pagespeed_nbt4woDM4f);</script>
+<script src="{{ asset('js/jquery.easing.1.3.js+jquery.waypoints.min.js+jquery.stellar.min.js+owl.carousel.min.js.pagespeed.jc.NEztLSF23K.js') }}"></script><script>eval(mod_pagespeed_nbt4woDM4f);</script>
 <script>eval(mod_pagespeed_JcmOf4OhXl);</script>
 <script>eval(mod_pagespeed_CSbekBKKDr);</script>
 <script>eval(mod_pagespeed_zaYVYd4vD3);</script>
-<script src="js/jquery.magnific-popup.min.js+jquery.animateNumber.min.js+bootstrap-datepicker.js+jquery.timepicker.min.js+scrollax.min.js.pagespeed.jc.qQbLibHtsz.js"></script><script>eval(mod_pagespeed_iN8ddZFfbE);</script>
+<script src="{{ asset('js/jquery.magnific-popup.min.js+jquery.animateNumber.min.js+bootstrap-datepicker.js+jquery.timepicker.min.js+scrollax.min.js.pagespeed.jc.qQbLibHtsz.js') }}">
+</script><script>eval(mod_pagespeed_iN8ddZFfbE);</script>
 <script>eval(mod_pagespeed_W28HQ1ieBw);</script>
 <script>eval(mod_pagespeed_Ec93DSl8lT);</script>
 <script>eval(mod_pagespeed_QGfnxj6Smx);</script>
 <script>eval(mod_pagespeed_Swzj03gqso);</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js+main.js.pagespeed.jc.lZfh61_23-.js"></script><script>eval(mod_pagespeed_xdKY0GKK5P);</script>
+<script src="{{ asset('js/google-map.js+main.js.pagespeed.jc.lZfh61_23-.js')}}" ></script>
+<script>eval(mod_pagespeed_xdKY0GKK5P);</script>
 <script>eval(mod_pagespeed_PpqPkiEwoF);</script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
