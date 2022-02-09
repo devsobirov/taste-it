@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate text-center mb-5">
-                    <h1 class="mb-2 bread">Menu</h1>
+                    <h1 class="mb-2 bread" id="menu-header">Menu</h1>
                     <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Menu <i class="fa fa-chevron-right"></i></span></p>
                 </div>
             </div>
@@ -32,10 +32,11 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group mr-2">
-                        <button type="submit" class="form-control btn btn-success" style="background: #249460 !important; color: white !important">Izlash</button>
-                    </div>
                 </form>
+
+                <div class="form-group mr-2">
+                    <a id="izlash" href="#" class="form-control btn btn-success" style="background: #249460 !important; color: white !important">Izlash</a>
+                </div>
             </div>
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-7 text-center heading-section ftco-animate"> <span class="subheading">Specialties</span>
@@ -132,4 +133,25 @@
         </div>
     </section>
 
+@endsection
+
+@section('scripts')
+    <script>
+        let a = 22;
+        let b = 88;
+
+        const submitBtn = document.getElementById('izlash');
+        let c  = a + b
+
+        submitBtn.addEventListener('click', function (e) {
+
+            fetch("{{route('menu')}}")
+                .then(response => response.json)
+                .then(json => console.log(json.JSON.parse))
+                .catch(e => console.log(e))
+            document.getElementById('menu-header').innerText = "Menu " + c
+        })
+
+        //console.log(a+b)
+    </script>
 @endsection

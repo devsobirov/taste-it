@@ -57,6 +57,10 @@ class PageController extends Controller
 //                    $query->where('name', 'like', "%$search%");
 //                }
 //            })
+
+        if ($request->expectsJson()) {
+            return response()->json($foods);
+        }
         return view('menu', compact('categories','foods'));
     }
 
