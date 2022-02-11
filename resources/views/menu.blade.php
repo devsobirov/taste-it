@@ -145,9 +145,13 @@
 
         submitBtn.addEventListener('click', function (e) {
 
-            fetch("{{route('menu')}}")
-                .then(response => response.json)
-                .then(json => console.log(json.JSON.parse))
+            fetch("{{ route('food.show', 10) }}")
+                .then(response => {
+                    console.log(response)
+                    return response
+                })
+                .then(resp => resp.json())
+                .then(result => console.log(result))
                 .catch(e => console.log(e))
             document.getElementById('menu-header').innerText = "Menu " + c
         })

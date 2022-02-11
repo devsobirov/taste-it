@@ -29,7 +29,7 @@ Route::prefix(LaravelLocalization::setLocale())
         Route::get('blog-single', [PageController::class, 'blog_single']);
         Route::get('blog', [PageController::class, 'blog']);
         Route::get('chef', [PageController::class, 'chef']);
-        Route::get('/menu', [PageController::class, 'menu'])->name('menu');
+        Route::get('/menu', [PageController::class, 'menu']);
         Route::get('reservation', [PageController::class, 'reservation']);
 
 

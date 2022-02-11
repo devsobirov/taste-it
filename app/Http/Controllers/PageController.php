@@ -64,6 +64,10 @@ class PageController extends Controller
         return view('menu', compact('categories','foods'));
     }
 
+    public function menuData()
+    {
+        return Food::select(['id','category_id','name','image','recept','price'])->get();
+    }
     public function reservation()
     {
         return view('reservation');
